@@ -1,0 +1,57 @@
+figure {
+  @include set-width(400px);
+  @include set-height(190px);
+  background: url($logo) no-repeat 0 50px;
+  float: left;
+  display: block;
+  @include set-margin(0);
+  @include responsiveness(959px){
+    @include set-width(inherit);height:140px;float:none;background-position:center;
+}
+@include responsiveness(459px){
+  background-size:contain;height:100px;
+}
+}
+nav {
+  @include set-width(540px);
+  @include set-height(190px);
+  float: left;
+  text-align: right;
+  @include responsiveness(959px){
+    @include set-width(inherit);height:50px;float:none;text-align:center;
+}
+@include responsiveness(459px){
+  margin-bottom:40px !important;
+}
+
+  ul {
+    list-style-type: none;
+    margin-top: 95px;
+    @include responsiveness(959px){
+      margin-top:0;
+  }
+
+  
+    li {
+      display: inline;
+      @include set-fontsize(0.8em);
+      margin-right: 10px;
+      @include responsiveness(959px){
+        @include set-fontsize(1em);;margin:0 10px;
+    }
+    @include responsiveness(767px){
+      @include set-fontsize(0.8em);;margin:0 5px;
+  }
+    
+      a {
+        color: $heading1-color;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+      
+        &:hover {
+          color: $heading2-color;
+        }
+      }
+    }
+  }
+}

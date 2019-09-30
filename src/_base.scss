@@ -1,0 +1,88 @@
+/* BASIC STYLES */
+body {
+  font-family: $body-font;
+  @include set-fontsize(1em); 
+  line-height: 2em;
+  background: url($back-image) $heading2-color repeat-x;
+  @include set-margin(0);
+}
+main {
+  @include set-width(940px);
+  @include set-margin(0 auto);
+  @include set-padding(0 10px) ;
+  @include responsiveness(959px){
+      @include set-width(768px);
+  }
+  @include responsiveness(767px){
+    @include set-width(460px);
+}
+@include responsiveness(459px){
+  @include set-width(300px);
+}
+}
+
+/* HEADER */
+header {
+  @include set-width(inherit);
+  clear: both;
+  text-align: center;
+  padding-top: 40px;
+
+ img {
+  max-width: 100%;
+  @include set-height(auto); 
+  @include responsiveness(767px){
+    margin-bottom:100px;
+  }
+  @include responsiveness(459px){
+    margin-bottom:80px;
+  }
+}
+ h1 {
+  color:$heading1-color;
+  font-weight: 100;
+  @include set-fontsize(4em);
+  line-height: 0;
+  @include responsiveness(959px){
+    @include set-fontsize(3em);
+}
+@include responsiveness(767px){
+  @include set-fontsize(2em);
+}
+&:first-child{
+  @include responsiveness(459px){
+    @include set-fontsize(1.4em);;margin-bottom:20px;
+  }
+}
+
+}
+ h2 {
+  color: $heading2-color;
+  font-weight: 900;
+  @include set-fontsize(2.5em);
+  line-height: 0;
+  margin-bottom: 70px;
+  @include responsiveness(959px){
+    @include set-fontsize(1.5em);
+}
+@include responsiveness(767px){
+  @include set-fontsize(1em);
+}
+@include responsiveness(459px){
+  @include set-fontsize(1.4em);
+}
+}
+ h3 {
+  color: $heading3-color;
+  font-weight: 400;
+  @include set-fontsize(2em);
+  line-height: 0;
+  margin-bottom: 50px;
+  @include responsiveness(767px){
+    @include set-fontsize(1.5em);
+  }
+  @include responsiveness(459px){
+    color:$heading2-color;@include set-fontsize(1em);
+  }
+}
+}

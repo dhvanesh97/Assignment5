@@ -1,0 +1,28 @@
+@mixin set-margin($margin) {
+    margin: $margin;
+}
+@mixin set-padding($padding){
+    padding: $padding;
+}
+
+@mixin set-width($width:initial) {
+    width: $width;
+}
+@mixin set-height($height) {
+    height: $height;
+    
+}
+@mixin set-fontsize($fontsize) {
+    font-size: $fontsize; 
+}
+
+@mixin responsiveness($max_width) {
+    @media screen and (max-width:$max_width){
+        @content;
+        
+    }
+}
+
+@mixin  bg-position($pos:0){
+    background-position: $pos*38;
+}

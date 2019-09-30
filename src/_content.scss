@@ -1,0 +1,85 @@
+/* CONTENT */
+#headline {
+  @include set-width(100%);
+  @include set-height(130px);
+  background: $headline-background;
+  text-align: center;
+  @include set-margin(0 auto);
+
+  h1 {
+    color: $heading2-color;
+    @include set-fontsize(2.5em);
+    font-weight: 100;
+    padding-top: 50px;
+    @include responsiveness(767px) {
+      @include set-fontsize(2em);
+      padding-top: 50px;
+    }
+    @include responsiveness(459px) {
+        @include set-fontsize(1.5em);
+      padding-top: 30px;
+    }
+  }
+}
+#content {
+  @include set-width(940px);
+  @include set-margin(20px auto);
+  @include responsiveness(959px) {
+    @include set-width(inherit);
+  }
+  @include responsiveness(767px) {
+    @include set-width(96%);
+    @include set-margin(0 2%);
+    float: none;
+  }
+  h3 {
+    color: $heading3-color;
+    @include set-fontsize(2em);
+    font-weight: 400;
+    @include responsiveness(459px) {
+      @include set-fontsize(1.6em);
+    }
+  }
+  #products {
+    @include set-width(460px);
+    float: left;
+    @include responsiveness(959px) {
+      @include set-width(46%);
+      @include set-margin(0 2%);
+    }
+    @include responsiveness(767px) {
+        @include set-width(96%);
+        @include set-margin(0 2%);
+      float: none;
+    }
+
+    img {
+      float: left;
+      margin-right: 20px;
+    }
+    article {
+      margin-bottom: 40px;
+    }
+    h4 {
+      line-height: 1em;
+    }
+  }
+  #testimonials {
+    @include set-width(460px);
+    float: right;
+    @include responsiveness(959px) {
+        @include set-width(46%);
+        @include set-margin(0 2%);
+    }
+    @include responsiveness(767px) {
+        @include set-width(96%);
+        @include set-margin(0 2%);
+      float: none;
+    }
+  }
+  article img {
+    @include responsiveness(459px) {
+      display: none;
+    }
+  }
+}
